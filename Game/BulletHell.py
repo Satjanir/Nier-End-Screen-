@@ -33,13 +33,13 @@ SCREEN_HEIGHT = 1025
 BLACK = (0, 0 , 0)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Bullet Hell')
-font = pygame.font.Font('OptimusPrinceps.ttf', 40)
-font1 = pygame.font.Font('OptimusPrinceps.ttf', 90)
+font = pygame.font.Font('Game\\OptimusPrinceps.ttf', 40)
+font1 = pygame.font.Font('Game\\OptimusPrinceps.ttf', 90)
 
 #setting the angle at which the image rectangle is set
 #setting image and hp
 correction_angle = 90
-cursor = ('nierCursor.png')
+cursor = ('C:\\Users\\2005t\\Documents\\Coding and Programming\\coding files\\Python\\Nier End screen Assignment\\Nier-End-Screen-\\Game\\NierCursor.png')
 
 #enemy bullets class
 class EnemyBullet:
@@ -58,7 +58,7 @@ class EnemyBullet:
         self.id = id
         #pygame load image
         #rotozoom is utilised to zoom in on empty space
-        self.image = pygame.transform.rotozoom(pygame.image.load("nierball.png"), 0, 0.08)
+        self.image = pygame.transform.rotozoom(pygame.image.load("Game\\Nierball.png"), 0, 0.08)
         #get rectangle measurement for image, after rotozoom
         self.rect = self.image.get_rect()
         #velocity is pythageros, from random integers of -7,7
@@ -234,7 +234,7 @@ class PlayerBullet:
     def __init__(self, x, y, speed , targetx, targety):
         #load image
         #rotozoom is utilised to zoom in on empty space
-        self.image = pygame.transform.rotozoom(pygame.image.load('PlayerAmmo.png'), 0, 0.2)
+        self.image = pygame.transform.rotozoom(pygame.image.load('Game\\PlayerAmmo.png'), 0, 0.2)
         #get rectangale for measurement for image, after rotozoom
         self.rect = self.image.get_rect()
         #get angle by using trig, tan(angle)
